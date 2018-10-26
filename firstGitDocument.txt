@@ -1,0 +1,5 @@
+firstGitDocument
+
+This is my first experimentation with Git.
+
+plus a second line...
