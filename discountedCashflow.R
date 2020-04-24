@@ -15,6 +15,9 @@
 ## https://www.r-bloggers.com/tidy-discounted-cash-flow-analysis-in-r-for-company-valuation/
 
 
+## https://github.com/KaroRonty/SmallCapValue
+
+
 library(xts)
 library(quantmod)
 library(tidyquant)
@@ -68,3 +71,50 @@ apply(qtr_returns, 2, function(x) round(exp(mean(x, na.rm = TRUE)*4)-1, 3)*100)
 
 qtr_returns
 chart.CumReturns(qtr_returns)
+
+
+mobility <- read_csv("applemobilitytrends-2020-04-22.csv")
+mobility
+levels(mobility$region)
+
+mobility <- read.csv("applemobilitytrends-2020-04-22.csv")
+levels(mobility$region)
+
+levels(mobility$geo_type)
+
+mobility %>% 
+  filter(geo_type == "city")
+
+unique(mobility$region)
+unique(mobility$transportation_type)
+
+mobility %>% 
+  filter(region == "London" & transportation_type == "driving") %>% 
+  gather(key, value)
+  
+
+library(tidyr)
+pivot_
+  
+names(mobility)[1:10]
+head(mobility)
+
+relig_income %>%
+  pivot_longer(-religion, names_to = "income", values_to = "count")
+
+mobility %>%
+  pivot_longer(-geo_type, names_to = "index", values_to = "count")
+
+
+mobility %>% 
+  filter(region == "London" & transportation_type == "driving") %>% 
+  select(-geo_type, -transportation_type)
+
+%>% 
+  pivot_longer(names_to = "index", values_to = "count")
+
+%>% 
+  gather(key, value)
+
+
+     
