@@ -6,6 +6,13 @@
 
 ## https://osm.netlify.app/post/mean-expectations/
 
+## https://www.r-bloggers.com/the-performance-of-small-value-stocks-in-bear-markets/
+
+
+## https://www.r-bloggers.com/tidy-discounted-cash-flow-analysis-in-r-for-company-valuation/
+## detailed DCF analysis.
+
+## https://www.r-bloggers.com/tidy-discounted-cash-flow-analysis-in-r-for-company-valuation/
 
 
 library(xts)
